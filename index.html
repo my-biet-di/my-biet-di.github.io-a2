@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/lazy-dog" rel="stylesheet">
+    <!--I want to use a google font for my h1, h2 for a better aesthetic, so I -->
 </head>
 
 <body>
@@ -15,19 +17,28 @@
         </nav>
     </header>
 
+    <!--I used some images from a Seventeen album and I found it dynamic, cheerful, and maybe it could draw attention with its fun, bright tones
+    I divided the background into several parts to create a parallax effect. I wanted to make the text appear and disappear, so I set it as the "behind the flower balloon" layer.-->
     <div class="section1">
     <section class="parallax">
         <img src="background back.png" id="back">
-        <h1 id="text"> SEVENTEEN </h1>
+        <h1 id="text" style="font-size: 4rem;"> SEVENTEEN </h1>
         <img src="background mid.png" id="mid">
         <img src="background front.png" id="front">
-
     </section>
     </div>
-
+<!--I want to introduce some basic information about Seventeen so that everyone knows what kind of group they are and what their music style is.-->
     <div class="section2">
-        <h2>SEVENTEEN</h2>
-        <p> A boy band group 
+        <h2 style="color:aliceblue;">SEVENTEEN</h2>
+        <p class="paragraph"> 
+            Seventeen is a South Korean boy group formed by Pledis Entertainment, now a subsidiary of HYBE, that debuted on May 26, 2015. The group consists of 13 members: S.Coups, Jeonghan, Joshua, Jun, Hoshi, Wonwoo, Woozi, The8, DK, Mingyu, Seungkwan, Vernon, and Dino. The name "17" comes from the fact that the group has 13 members, divided into 3 smaller units (vocal, hip hop, and performance), forming one large group; adding up the numbers in each unit results in 17.<br>
+            The group is known for its distinctive, cheerful, and energetic music, along with lyrics that are distinctly youthful and not forced into adulthood. They are also known for being self-producing, with most of their songs being written and choreographed by the members themselves.
+        </p>
+        <!--I wanted to add the band's logo and decided to use it as a navigation tool to the music album page-->
+        <a href="album.html">
+        <img style="margin:auto" src="photo/image-removebg-preview (1).png" alt="SEVENTEEN Logo">
+        </a>
+        <p class="paragraph">To music album</p>
     </div>
 
     <script src="script.js"></script>

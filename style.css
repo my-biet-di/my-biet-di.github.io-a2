@@ -24,7 +24,7 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     background: linear-gradient(60deg, rgb(247, 202, 201), rgb(179, 206, 229));
-    /*I choose these colors because those are Seventeen's fan club color, và tôi nghĩ nó sẽ liên quan hơn khi mình làm branding cho một nhóm nhạc*/
+/*I chose these colors because those are Seventeen's fan club colors, and since the main goal of this page is to brand a group/album, I wanted to choose these colors.*/
 }
 
 header {
@@ -37,8 +37,10 @@ header {
     align-items: center;
     justify-content: center; /*to make sure everything in this class is in center*/
     z-index: 100;
+    background-color: rgba(240,248,255,0.5);
+    
 }
-
+/*I want to create a navigation bar to move between the two pages above.*/
 .navigation a {
     text-decoration: none;
     color: #3977c1;
@@ -76,9 +78,20 @@ header {
 }
 
 .section2 {
+    display: flex;
+    flex-direction: column;
     background: #fcc5dd;
+    position: relative;
+    padding: 50px;
 }
+/*to create a frame for writing information under the parallax section above.*/
 
+h1, h2{
+    font-family: 'Lazy Dog', sans-serif;
+}
+/*to specific the font that I use*/
+
+/**/
 #text {
     top: 15vw;
     position: absolute;
@@ -86,10 +99,11 @@ header {
     color: #333;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
 }
-/*https://youtu.be/Jt2yNZdOHxQ?si=a6N1BQ7GtfH1NdDf
+/* I watched these video to do the parallax scrolling effect.
+https://youtu.be/Jt2yNZdOHxQ?si=a6N1BQ7GtfH1NdDf
 https://youtu.be/kmM6mqvnxcs?si=5-dWS70F6ZMzWW7Z*/
 
-
+/*creat a container for all the stuff like album image and text*/
 .container {
     display: flex;
     align-items: center;
@@ -103,15 +117,15 @@ https://youtu.be/kmM6mqvnxcs?si=5-dWS70F6ZMzWW7Z*/
 
 .player{
     position:relative;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     cursor: pointer;
 }
 
 .cover {
     top: 40px;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     position: absolute;
     top: 20px;
     z-index: 2;
@@ -119,14 +133,15 @@ https://youtu.be/kmM6mqvnxcs?si=5-dWS70F6ZMzWW7Z*/
 
 .vinyl{
     position: absolute;
-    width: 190px;
-    height: 190px;
+    width: 290px;
+    height: 290px;
     z-index: 1;
     top: 25px;
     left: 5px;
     transition: transform 0.3s ease;
 }
 
+/*I want to make the vinyl move out when hovering over the album for aesthetic reasons.*/
 .player:hover .vinyl{
     transform: translateX(90px);
 }
@@ -140,30 +155,18 @@ https://youtu.be/kmM6mqvnxcs?si=5-dWS70F6ZMzWW7Z*/
     cursor: pointer;
     transition: 0.3s ease;
 }
-
-/*làm rotate animation cho thêm phần thú vị*/ 
-.rotating{
-    animation: rotateVinyl 5s linear infinite;
-}
-
-@keyframes rotateVinyl {
-    from {transform: translateX(90px) rotate(0deg);}
-    to {transform: translateX(90) rotate(360deg);}
-}
-
-.vinyl .is-playing {
-    transform: translateX(90px);
-}
+/*I use z-index to ensure that elements like album cover, vinyl, and button are aligned from top to bottom.*/
 
 .info{
-    max-width: 300px;
+    max-width: 600px;
+    text-align: left;
 }
 
-/*.sec{
+.sec{
     position: relative;
     background: #d7aabf;
     padding: 100px;
-}*/ 
+}
 
 /* Media responsive */
 img, picture, svg, video {
@@ -173,7 +176,7 @@ img, picture, svg, video {
 
 h2,h3,h4,h5,h6 {
     text-wrap: balance;
-    font-size: 2rem;
+    font-size: 3rem;
     margin: 20px;
     margin-bottom: 10px;
     padding: 20px;
@@ -181,22 +184,29 @@ h2,h3,h4,h5,h6 {
 }
 
 h1 {
-    font-size: 3rem;
-    margin: 20px;
-    padding: 50px;
+    font-size: 5rem;
+    margin: auto;
+    padding: 100px;
     padding-bottom: 20px;
     text-align: center;
     font-weight: bold;
+    color:rgb(0, 64, 104);
 }
 
 p {
     text-wrap: pretty; /* Prevents orphans on lines */
-    font-size: 1.125rem;
+    max-width: 80ch;
+    font-size: 1.2rem;
     margin: 20px;
     padding-left: 20px;
     text-align: center;
 }
 
+/*I got an issue of the text paragraph didn't stay in the center of the home page, so I create this to make sure it stay in the center*/
+.paragraph{
+    display: flex;
+    margin: auto;
+}
 
 
 @media (prefers-reduced-motion: no-preference) {

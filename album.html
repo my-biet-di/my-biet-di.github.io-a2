@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/lazy-dog" rel="stylesheet">
+    <!--I want to use a google font for my h1, h2 for a better aesthetic, so I -->
 </head>
+
 <body>
     <header>
         <nav class="navigation">
@@ -18,6 +21,7 @@
         <h1> MUSIC ALBUM</h1>
     </div>
 
+    <!--I wanted each album to have its own vinyl record based on the album's color scheme, so I designed it in Canva and then cropped the image into smaller parts to put into the HTML-->
     <div class="container">
         <div class="player">
             <img src="photo/L&L cover.png" alt="Love & Letter Cover" class="cover" id="cover">
@@ -26,16 +30,18 @@
                 <img src="photo/L&L play.png" alt="Play" class="button" id="icon">
             </div>
         </div>
-
+<!--I wanted to introduce the album a little, so I put the information right next to it so people can listen, read, and know more about it-->
         <div class="info">
             <h2>Love & Letter</h2>
             <p>Love & Letter is their debut (first) studio album, released on April 25, 2016, through Pledis Entertainment. The album includes 10 tracks that focus on themes of first love experiences. Love & Letter has a youthful and energetic style, and the members also participated in writing and co-composing for almost every track. During the album's promotion, the group won their first two Show Champion awards with the song "Pretty U," which is also the album's title track. With this song, they also charted at number 3 on Billboard's World Digital Songs chart, achieving their highest ranking at the time.</p>
             <p>Song: Pretty U</p>
+            <a class="info" href="https://open.spotify.com/album/50BrkBakrLWufmTLjCVBwn?si=1nv-r9VDR-yIpcfa5fieFw">Listen to full</a>
+        <!--I wanted to include a link so that if people like this genre, they can listen to other songs on the album, and this is also a way to promote the album-->
         </div>
 
         <audio id="music"> <source src="music/Pretty U.mp3" type="audio/mpeg"></audio>
     </div>
-
+<!--I copy the format for other album-->
     <div class="container">
         <div class="player">
             <img src="photo/TA cover.png" alt="Teen, Age cover" class="cover" id="cover">
@@ -49,6 +55,7 @@
             <h2>TEEN, Age</h2>
             <p>TEEN, Age is their second studio album, released on November 6, 2017. The album features many songs with the number 13, coinciding with the group's number of members, reaching number 13 on the Billboard charts. This album is the third chapter of their “2017 Seventeen Project,” which started with the release of Al1 in May of the same year. Because of this, many assumed a dark concept would be the main theme for this album, but that wasn't the case. “Clap,” with its fast, bright rhythm and catchy lyrics, perfectly captures the youthful, playful yet mature side of teenagers growing up.</p>
             <p>Song: Clap</p>
+            <a class="info" href="https://open.spotify.com/album/5aHdNainJWMc3n2AqfiOg5?si=F88Qudw8RDe46w_SE2CCRw">Listen to full</a>
         </div>
 
         <audio id="music1"> <source src="music/clap.mp3" type="audio/mpeg"></audio>
@@ -67,6 +74,7 @@
             <h2>An Ode</h2>
             <p>An Ode is the group's third album, released on September 16, 2019. It's considered a major turning point in their career. Unlike their previous studio albums with their cheerful style, this album has a darker and more mature feel. Seventeen aims to convey a message about the "fear" that everyone experiences, using unique methods only Seventeen can do. The title track, "Fear," with its powerful yet heavy bass, expresses this shared fear.</p>
             <p>Song: Fear</p>
+            <a class="info" href="https://open.spotify.com/album/5HlxNTQpJb7buoWIRS4M7T?si=P8v0llKsTCaLqDpkAVexsw">Listen to full</a>
         </div>
 
         <audio id="music2"> <source src="music/fear.mp3" type="audio/mpeg"></audio>
@@ -74,8 +82,8 @@
 
     <div class="container">
         <div class="player">
-            <img src="photo/FTS cover.png" alt="An Ode cover" class="cover" id="cover">
-            <img src="photo/FTS vinyl.png" alt="An Ode vinyl" class="vinyl" id="vinyl">
+            <img src="photo/FTS cover.png" alt="Face The Sun cover" class="cover" id="cover">
+            <img src="photo/FTS vinyl.png" alt="Face The Sun vinyl" class="vinyl" id="vinyl">
             <div class="playButton">
                 <img src="photo/FTS play.png" alt="Play" class="button" id="icon3">
             </div>
@@ -83,8 +91,9 @@
 
         <div class="info">
             <h2>Face the sun</h2>
-            <p>AThis is Seventeen's fourth album, released on May 27, 2022, one day after the group's 7th anniversary. This album brings a new energy, unlike previous Seventeen albums, and explores a deeper aspect of anxieties encountered while pursuing dreams. It's an album with diverse emotions; each song has a different vibe but still retains the group's unique style. "Hot," with its explosive title track, has a slightly rebellious vibe.</p>
+            <p>This is Seventeen's fourth album, released on May 27, 2022, one day after the group's 7th anniversary. This album brings a new energy, unlike previous Seventeen albums, and explores a deeper aspect of anxieties encountered while pursuing dreams. It's an album with diverse emotions; each song has a different vibe but still retains the group's unique style. "Hot," with its explosive title track, has a slightly rebellious vibe.</p>
             <p>Song: HOT</p>
+            <a class="info" href="https://open.spotify.com/album/4lfFgz2rD1irxf7dZhNJht?si=82461369e7eb499c">Listen to full</a>
         </div>
 
         <audio id="music3"> <source src="music/hot.mp3" type="audio/mpeg"></audio>
@@ -92,17 +101,18 @@
 
     <div class="container">
         <div class="player">
-            <img src="photo/HBD cover.png" alt="An Ode cover" class="cover" id="cover">
-            <img src="photo/FTS vinyl.png" alt="An Ode vinyl" class="vinyl" id="vinyl">
+            <img src="photo/HBD cover.png" alt="Happy Burstday cover" class="cover" id="cover">
+            <img src="photo/HBD vinyl.png" alt="Happy Burstday vinyl" class="vinyl" id="vinyl">
             <div class="playButton">
                 <img src="photo/HBD play.png" alt="Play" class="button" id="icon4">
             </div>
         </div>
 
         <div class="info">
-            <h2>Hapy BurstDay</h2>
-            <p>Artist: SEVENTEEN</p>
+            <h2>Happy BurstDay</h2>
+            <p>This is their 5th album, released on May 26, 2025, to celebrate their 10th anniversary. The album is titled "Happy Burstday" instead of "Happy Birthday" as usual because the group thought it would be like an explosive burst of energy sent to their fans. This is a special album, as each member has a solo track, even those who were serving in the military at the time. This album captures all the energy the group has shown over the past 10 years, but it's not as youthful as when they first debuted; instead, it's more mature and experienced. With "Happy Burstday," Seventeen wants to express their gratitude to their fans and open a promising new chapter.</p>
             <p>Song: Thunder</p>
+            <a class="info" href="https://open.spotify.com/album/6160Q4MxABBaeqMW5AZss4?si=84f9a6b7a74946d8">Listen to full</a>
         </div>
 
         <audio id="music4"> <source src="music/thunder.mp3" type="audio/mpeg"></audio>
@@ -115,22 +125,21 @@
         let music3 = document.getElementById('music3');
         let music4 = document.getElementById('music4');
 
-
         let button = document.getElementById('icon');
         let button1 = document.getElementById('icon1');
         let button2 = document.getElementById('icon2');
         let button3 = document.getElementById('icon3');
         let button4 = document.getElementById('icon4');
 
+//I want each album to have a different play and pause button to match the album and it will change when you click it.
+// I also watch a youtube video https://youtu.be/1b9MYpfoTpI?si=1HFooWgcfaAwgByk to know how to do it
         icon.onclick = function(){
             if(music.paused){
                 music.play();
                 icon.src="photo/L&L stop.png"
-                vinyl.classList.add('rotating', 'is-playing');
             }else{
                 music.pause();
                 icon.src="photo/L&L play.png"
-                vinyl.classList.remove('rotating', 'is-playing');
             }
         }
 
@@ -138,11 +147,9 @@
             if(music1.paused){
                 music1.play();
                 icon1.src="photo/TA stop.png"
-                vinyl.classList.add('rotating', 'is-playing');
             }else{
                 music1.pause();
                 icon1.src="photo/TA play.png"
-                vinyl.classList.remove('rotating', 'is-playing');
             }
         }
 
@@ -150,11 +157,9 @@
             if(music2.paused){
                 music2.play();
                 icon2.src="photo/AA stop.png"
-                vinyl.classList.add('rotating', 'is-playing');
             }else{
                 music2.pause();
                 icon2.src="photo/AA play.png"
-                vinyl.classList.remove('rotating', 'is-playing');
             }
         }
 
@@ -162,11 +167,9 @@
             if(music3.paused){
                 music3.play();
                 icon3.src="photo/FTS stop.png"
-                vinyl.classList.add('rotating', 'is-playing');
             }else{
                 music3.pause();
                 icon3.src="photo/FTS play.png"
-                vinyl.classList.remove('rotating', 'is-playing');
             }
         }
 
@@ -174,11 +177,9 @@
             if(music4.paused){
                 music4.play();
                 icon4.src="photo/HBD stop.png"
-                vinyl.classList.add('rotating', 'is-playing');
             }else{
                 music4.pause();
                 icon4.src="photo/HBD play.png"
-                vinyl.classList.remove('rotating', 'is-playing');
             }
         }
         const audios = document.querySelectorAll('audio');
@@ -187,13 +188,13 @@
     /*I asked AI for the code, I've tried but it didn't work so I choose to copy and paste for each album*/
 
     audios.forEach(audio => {
-    // Add event listener to stop others when one plays
-        audio.addEventListener('play', () => {
-            audios.forEach(otherAudio => {
-                if (otherAudio !== audio) {
-                otherAudio.pause();
-                otherAudio.currentTime = 0; // Rewind to start
-                }
+    // Add event listener to stop others when one plays so that the music doesn't overlap.
+       audio.addEventListener('play', () => {
+        audios.forEach(otherAudio => {
+           if (otherAudio !== audio) {
+            otherAudio.pause();
+               otherAudio.currentTime = 0; // play the song from beginning
+             }
             });
         });
     });
