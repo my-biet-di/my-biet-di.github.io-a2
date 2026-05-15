@@ -32,13 +32,13 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 100px;
+    padding: 20px 5%;
     display: flex;
     align-items: center;
     justify-content: center; /*to make sure everything in this class is in center*/
-    z-index: 100;
+    z-index: 100; /*To make sure the navigator alway on top of other layer/elements*/
     background-color: rgba(240,248,255,0.5);
-    
+    box-sizing: border-box;
 }
 /*I want to create a navigation bar to move between the two pages above.*/
 .navigation a {
@@ -60,7 +60,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100hv;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .parallax img{
@@ -68,6 +69,8 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    height: 100%;
+    object-fit: cover; /*to make sure the image fit the container/or don't resize when use phone or resize the website*/
     pointer-events: none;
 }
 
@@ -109,6 +112,8 @@ https://youtu.be/kmM6mqvnxcs?si=5-dWS70F6ZMzWW7Z*/
     align-items: center;
     justify-content: space-around;
     background-color: #fff;
+    gap: 40px;
+    max-width: 1000px;
     padding: 35px;
     margin: 20px auto;
     border-radius: 10px;
@@ -133,8 +138,8 @@ https://youtu.be/kmM6mqvnxcs?si=5-dWS70F6ZMzWW7Z*/
 
 .vinyl{
     position: absolute;
-    width: 290px;
-    height: 290px;
+    width: 280px;
+    height: 280px;
     z-index: 1;
     top: 25px;
     left: 5px;
@@ -143,7 +148,7 @@ https://youtu.be/kmM6mqvnxcs?si=5-dWS70F6ZMzWW7Z*/
 
 /*I want to make the vinyl move out when hovering over the album for aesthetic reasons.*/
 .player:hover .vinyl{
-    transform: translateX(90px);
+    transform: translateX(140px);
 }
 
 .playButton .button{
@@ -162,10 +167,35 @@ https://youtu.be/kmM6mqvnxcs?si=5-dWS70F6ZMzWW7Z*/
     text-align: left;
 }
 
-.sec{
-    position: relative;
-    background: #d7aabf;
-    padding: 100px;
+.link{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+/*To ensure that when resizing the website and using a phone, the images are not distorted*/
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .info {
+        text-align: center;
+    }
+
+    .player, .cover {
+        width: 250px;
+        height: 250px;
+    }
+    .vinyl {
+        width: 240px;
+        height: 240px;
+    }
+
+    .player:hover .vinyl {
+        transform: translateX(60px); 
+    }
 }
 
 /* Media responsive */
@@ -184,7 +214,7 @@ h2,h3,h4,h5,h6 {
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 9vw;
     margin: auto;
     padding: 100px;
     padding-bottom: 20px;
