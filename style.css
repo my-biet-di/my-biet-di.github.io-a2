@@ -141,7 +141,7 @@ https://youtu.be/kmM6mqvnxcs?si=5-dWS70F6ZMzWW7Z*/
     width: 270px;
     height: 270px;
     z-index: 1;
-    top: 25px;
+    top: 35px;
     left: 8px;
     transition: transform 0.3s ease;
 }
@@ -194,7 +194,7 @@ https://youtu.be/kmM6mqvnxcs?si=5-dWS70F6ZMzWW7Z*/
     }
 
     .player:hover .vinyl {
-        transform: translateX(60px); 
+        transform: translateX(120px); 
     }
 }
 
