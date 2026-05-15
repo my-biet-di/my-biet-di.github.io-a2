@@ -138,11 +138,11 @@ https://youtu.be/kmM6mqvnxcs?si=5-dWS70F6ZMzWW7Z*/
 
 .vinyl{
     position: absolute;
-    width: 280px;
-    height: 280px;
+    width: 270px;
+    height: 270px;
     z-index: 1;
     top: 25px;
-    left: 5px;
+    left: 8px;
     transition: transform 0.3s ease;
 }
 
@@ -189,8 +189,8 @@ https://youtu.be/kmM6mqvnxcs?si=5-dWS70F6ZMzWW7Z*/
         height: 250px;
     }
     .vinyl {
-        width: 240px;
-        height: 240px;
+        width: 220px;
+        height: 220px;
     }
 
     .player:hover .vinyl {
