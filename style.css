@@ -1,0 +1,207 @@
+/*
+* Kevin Powell
+* https://youtu.be/cCAtD_BAHNw
+*/
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: inherit; /* Get rid of all font sizes and heights */
+}
+
+html {
+    hanging-punctuation: first last; /* Not supported in Chrome */
+}
+
+body {
+    margin: 0;
+    height: 200vh;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(60deg, rgb(247, 202, 201), rgb(179, 206, 229));
+    /*I choose these colors because those are Seventeen's fan club color, và tôi nghĩ nó sẽ liên quan hơn khi mình làm branding cho một nhóm nhạc*/
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /*to make sure everything in this class is in center*/
+    z-index: 100;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #3977c1;
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+.navigation a:hover, .navigation a.active {
+    background-color: #3977c1;
+    color: white;
+}
+
+.parallax {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100hv;
+}
+
+.parallax img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.section1, .section2 {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+.section2 {
+    background: #fcc5dd;
+}
+
+#text {
+    top: 15vw;
+    position: absolute;
+    font-size: 8vw;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+}
+/*https://youtu.be/Jt2yNZdOHxQ?si=a6N1BQ7GtfH1NdDf
+https://youtu.be/kmM6mqvnxcs?si=5-dWS70F6ZMzWW7Z*/
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fff;
+    padding: 35px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.player{
+    position:relative;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.cover {
+    top: 40px;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 20px;
+    z-index: 2;
+}
+
+.vinyl{
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    z-index: 1;
+    top: 25px;
+    left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.player:hover .vinyl{
+    transform: translateX(90px);
+}
+
+.playButton .button{
+    position: absolute;
+    bottom: -40px;
+    left: -25px;
+    width: 90px;
+    z-index: 3;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/*làm rotate animation cho thêm phần thú vị*/ 
+.rotating{
+    animation: rotateVinyl 5s linear infinite;
+}
+
+@keyframes rotateVinyl {
+    from {transform: translateX(90px) rotate(0deg);}
+    to {transform: translateX(90) rotate(360deg);}
+}
+
+.vinyl .is-playing {
+    transform: translateX(90px);
+}
+
+.info{
+    max-width: 300px;
+}
+
+/*.sec{
+    position: relative;
+    background: #d7aabf;
+    padding: 100px;
+}*/ 
+
+/* Media responsive */
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+}
+
+h2,h3,h4,h5,h6 {
+    text-wrap: balance;
+    font-size: 2rem;
+    margin: 20px;
+    margin-bottom: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 20px;
+    padding: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+p {
+    text-wrap: pretty; /* Prevents orphans on lines */
+    font-size: 1.125rem;
+    margin: 20px;
+    padding-left: 20px;
+    text-align: center;
+}
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+:has(:target) {
+scroll-behavior: smooth;
+scroll-padding-top: 3rem;
+}
+}
